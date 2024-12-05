@@ -53,6 +53,8 @@ public class RestBackend {
 			MongoDatabase database = mongoClient.getDatabase(prop.getProperty("db.name"));
 			logger.info(prop.getProperty("db.name"));
 
+			
+			
 
 	      
 	      get("/restaurant/:name", (req,res)->{
@@ -66,7 +68,7 @@ public class RestBackend {
 	    	    
 	    	  } else {
 	    		  res.status(404);
-	    		  return ("<html><body><h1>Title not found. </h1></body></html>");
+	    		  return ("<html><body><h1>Title not found. </h1></body></html>");// JSON ska det vara
 	    	  }
 	          return myDoc.toJson();
 	      });
